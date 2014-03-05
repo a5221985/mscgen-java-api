@@ -1,0 +1,2 @@
+JNI_INCLUDE="-I/usr/share/jdk1.7.0_51/include -I/usr/share/jdk1.7.0_51/include/linux"
+gcc $JNI_INCLUDE -fPIC -shared cImplOne.c cImplTwo.c -o libNativeLib.so

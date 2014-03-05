@@ -1,0 +1,11 @@
+<project name="header" default="main">
+	<target name="compile">
+		<javac srcdir="src" destdir="bin"/>
+	</target>
+
+	<target name="jni" depends="compile">
+		<javah destdir="src" classpath="bin" class="org.home.jni.msc.MSCGen"/> 
+	</target>
+
+	<target name="main" depends="jni"/>
+</project>

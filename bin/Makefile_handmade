@@ -1,0 +1,4 @@
+JNI_INCLUDE = -I/usr/share/jdk1.7.0_51/include -I/usr/share/jdk1.7.0_51/include/linux
+MSCGEN_LIBRARIES = -L/home/abdullah/SVN_Workspace/org.home.jni/src/libs
+all:
+	g++ -Wall -fPIC generate.cpp $(JNI_INCLUDE) $(MSCGEN_LIBRARIES) -lMscgen -shared -o libGenerate.so
